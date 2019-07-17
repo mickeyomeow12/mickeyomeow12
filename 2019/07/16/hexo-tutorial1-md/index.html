@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="今天中午吃什么">
 <meta property="og:description" content="入门">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-16T16:02:34.104Z">
+<meta property="og:updated_time" content="2019-07-17T16:24:44.888Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo入门指南 一">
 <meta name="twitter:description" content="入门">
@@ -376,19 +376,38 @@
 <h2 id="设定Font-Matter"><a href="#设定Font-Matter" class="headerlink" title="设定Font Matter"></a>设定Font Matter</h2><p>可以在scaffolds里找到对应类型增添想要加的font matter </p>
 <p>scaffold里可以设置default content</p>
 <p>新建新型page类型 scaffolds里 新建.md layout:post</p>
-<h2 id="首页文章显示摘要"><a href="#首页文章显示摘要" class="headerlink" title="首页文章显示摘要"></a>首页文章显示摘要</h2><p>在文章中适当位置插入 <code>&lt;!--more--&gt;</code>，该位置之前的部分即为摘要，会显示在首页中。</p>
-<h2 id="一些遇到的杂七杂八的问题"><a href="#一些遇到的杂七杂八的问题" class="headerlink" title="一些遇到的杂七杂八的问题"></a>一些遇到的杂七杂八的问题</h2><h3 id="hexo博文分类数和标签数显示不正确？"><a href="#hexo博文分类数和标签数显示不正确？" class="headerlink" title="hexo博文分类数和标签数显示不正确？"></a>hexo博文分类数和标签数显示不正确？</h3><p>部署前最好清楚一遍缓存 否则渲染容易出现错误</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="关于显示访问统计"><a href="#关于显示访问统计" class="headerlink" title="关于显示访问统计"></a>关于显示访问统计</h3><ol>
-<li>找到themes/next/.config.yml 搜索busuanzi 把所有false的设置改成enable</li>
-<li>找到next/layout/third_party/analytics/busuanzi-counter.swig</li>
-<li>修改成这个</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
+<h2 id="首页文章显示摘要"><a href="#首页文章显示摘要" class="headerlink" title="首页文章显示摘要"></a>首页文章显示摘要</h2><p>在文章中适当位置插入 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## 一些遇到的杂七杂八的问题</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###  hexo博文分类数和标签数显示不正确？</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">部署前最好清楚一遍缓存 否则渲染容易出现错误</span><br><span class="line"></span><br><span class="line">&#123;% codeblock %&#125;</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 关于显示访问统计</span><br><span class="line"></span><br><span class="line">1. 找到themes/next/.config.yml 搜索busuanzi 把所有false的设置改成enable</span><br><span class="line">2. 找到next/layout/third_party/analytics/busuanzi-counter.swig</span><br><span class="line">3. 修改成这个</span><br><span class="line"></span><br><span class="line">&#123;%codeblock%&#125;</span><br><span class="line">    &lt;script async src=&quot;//cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endcodeblock%&#125;</span><br><span class="line"></span><br><span class="line">## hexo配置live2d看板娘</span><br><span class="line"></span><br><span class="line">[官方指路](https://github.com/EYHN/hexo-helper-live2d)</span><br><span class="line"></span><br><span class="line">### 配置</span><br><span class="line"></span><br><span class="line">第一步：在终端找到你的hexo博客的文件夹的目录 然后输入下方命令</span><br><span class="line"></span><br><span class="line">&gt; $ npm install hexo-helper-live2d --save</span><br><span class="line"></span><br><span class="line">在 [插件作者的博客](https://huaji8.top/post/live2d-plugin-2.0/)里挑选一只你喜欢的看板娘，记下它的名字</span><br><span class="line"></span><br><span class="line">第二步：live2d-widget-model-你选中的萌物名字 即可获得对应的 Live2D 资源</span><br><span class="line"></span><br><span class="line">以 tororo 这只白喵为例</span><br><span class="line"></span><br><span class="line">仍是在终端的hexo博客根目录输入命令</span><br><span class="line"></span><br><span class="line">&gt;$ npm install live2d-widget-model-tororo --save</span><br><span class="line"></span><br><span class="line">第三步：配置博客的_config.yml文档</span><br></pre></td></tr></table></figure></p>
+<pre><code># Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+  enable: true
+  scriptFrom: jsdelivr # 默认
+  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
+  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
+  pluginModelPath: assets/ # 模型文件相对与插件根目录路径
+# scriptFrom: jsdelivr # jsdelivr CDN
+# scriptFrom: unpkg # unpkg CDN
+# scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+ model:
+    use: live2d-widget-model-tororo # npm-module package name
+   scale: 1
+   hHeadPos: 0.5
+    vHeadPos: 0.618
+ display:
+   superSample: 2
+   width: 300
+   height: 300
+   position: right
+   hOffset: 30
+   vOffset: -20
+  mobile:
+   show: false
+   scale: 0.05
+ react:
+   opacityDefault: 1
+  opacityOnHover: 0.2</code></pre><p>```</p>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://uchuhimo.me/2017/04/11/genesis/" target="_blank" rel="noopener">如何使用 Hexo 和 GitHub Pages 搭建这个博客</a><br><a href="https://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="noopener">官方文档</a></p>
 
       
@@ -560,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#入门"><span class="nav-number">1.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用Hexo命令"><span class="nav-number">1.1.</span> <span class="nav-text">常用Hexo命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成网页"><span class="nav-number">1.1.1.</span> <span class="nav-text">生成网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程上传同步git"><span class="nav-number">1.1.2.</span> <span class="nav-text">远程上传同步git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署查看本地网页动态"><span class="nav-number">1.1.3.</span> <span class="nav-text">部署查看本地网页动态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页"><span class="nav-number">1.2.</span> <span class="nav-text">网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志"><span class="nav-number">1.3.</span> <span class="nav-text">日志</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个日志"><span class="nav-number">1.3.1.</span> <span class="nav-text">新建一个日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个草稿"><span class="nav-number">1.3.2.</span> <span class="nav-text">新建一个草稿</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页"><span class="nav-number">1.4.1.</span> <span class="nav-text">添加标签页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页"><span class="nav-number">1.4.2.</span> <span class="nav-text">添加分类页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设定Font-Matter"><span class="nav-number">1.5.</span> <span class="nav-text">设定Font Matter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章显示摘要"><span class="nav-number">1.6.</span> <span class="nav-text">首页文章显示摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些遇到的杂七杂八的问题"><span class="nav-number">1.7.</span> <span class="nav-text">一些遇到的杂七杂八的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo博文分类数和标签数显示不正确？"><span class="nav-number">1.7.1.</span> <span class="nav-text">hexo博文分类数和标签数显示不正确？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于显示访问统计"><span class="nav-number">1.7.2.</span> <span class="nav-text">关于显示访问统计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">2.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#入门"><span class="nav-number">1.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用Hexo命令"><span class="nav-number">1.1.</span> <span class="nav-text">常用Hexo命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成网页"><span class="nav-number">1.1.1.</span> <span class="nav-text">生成网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程上传同步git"><span class="nav-number">1.1.2.</span> <span class="nav-text">远程上传同步git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署查看本地网页动态"><span class="nav-number">1.1.3.</span> <span class="nav-text">部署查看本地网页动态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页"><span class="nav-number">1.2.</span> <span class="nav-text">网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志"><span class="nav-number">1.3.</span> <span class="nav-text">日志</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个日志"><span class="nav-number">1.3.1.</span> <span class="nav-text">新建一个日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个草稿"><span class="nav-number">1.3.2.</span> <span class="nav-text">新建一个草稿</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页"><span class="nav-number">1.4.1.</span> <span class="nav-text">添加标签页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页"><span class="nav-number">1.4.2.</span> <span class="nav-text">添加分类页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设定Font-Matter"><span class="nav-number">1.5.</span> <span class="nav-text">设定Font Matter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章显示摘要"><span class="nav-number">1.6.</span> <span class="nav-text">首页文章显示摘要</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">2.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
