@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="入门">
+<meta name="description" content="相关入门 :)">
 <meta name="keywords" content="Tutorial">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo入门指南">
 <meta property="og:url" content="http://yoursite.com/2019/07/16/hexo-tutorial1-md/index.html">
 <meta property="og:site_name" content="今天中午吃什么">
-<meta property="og:description" content="入门">
+<meta property="og:description" content="相关入门 :)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-19T05:40:29.325Z">
+<meta property="og:updated_time" content="2019-09-22T08:13:02.367Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo入门指南">
-<meta name="twitter:description" content="入门">
+<meta name="twitter:description" content="相关入门 :)">
 
 
 
@@ -298,8 +298,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-19T13:40:29+08:00">
-                2019-07-19
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-22T16:13:02+08:00">
+                2019-09-22
               </time>
             
           </span>
@@ -359,7 +359,8 @@
       
 
       
-        <h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><a id="more"></a>
+        <p>相关入门 :)</p>
+<a id="more"></a>
 
 <h2 id="常用Hexo命令"><a href="#常用Hexo命令" class="headerlink" title="常用Hexo命令"></a>常用Hexo命令</h2><p>初始化目录：hexo init [folder]</p>
 <p>新建文章：hexo new [layout] <title> 或 hexo n [layout] <title></title></title></p>
@@ -442,7 +443,25 @@
 <li>abstract: 是该博客的摘要，会显示在博客的列表页</li>
 <li>message: 这个是博客查看时，密码输入框上面的描述性文字</li>
 </ul>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://uchuhimo.me/2017/04/11/genesis/" target="_blank" rel="noopener">如何使用 Hexo 和 GitHub Pages 搭建这个博客</a><br><a href="https://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="noopener">官方文档</a><br><a href="https://11.tt/posts/2018/how-to-play-with-live2d-on-hexo/" target="_blank" rel="noopener">搭建看板娘</a><br><a href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md" target="_blank" rel="noopener">Hexo加密官方指南指路</a></p>
+<h2 id="如何绑定阿里云域名"><a href="#如何绑定阿里云域名" class="headerlink" title="如何绑定阿里云域名"></a>如何绑定阿里云域名</h2><p>首先 你要有个域名 </p>
+<p>可以去阿里云等购买</p>
+<p>购买后</p>
+<h3 id="添加CNAME文件"><a href="#添加CNAME文件" class="headerlink" title="添加CNAME文件"></a>添加CNAME文件</h3><p>在你的hexo博客的文件根目录下的source文件夹下新建CNAME文件，没有后缀。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mac终端命令： touch CNAME</span><br></pre></td></tr></table></figure>
+
+<p>在Sublime Text中打开CNAME文件，在里边添加你的域名信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如：xxx.com</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：保存后使用hexo g 和hexo s命令上传部署</p>
+<h3 id="给github项目添加"><a href="#给github项目添加" class="headerlink" title="给github项目添加"></a>给github项目添加</h3><p>在项目的Settings中，在Custom domain添加自己的域名</p>
+<h3 id="在域名解析提供商"><a href="#在域名解析提供商" class="headerlink" title="在域名解析提供商"></a>在域名解析提供商</h3><p>返回阿里云的域名控制台 找到解析 进入云解析</p>
+<p>点击添加记录</p>
+<p>（1）先添加一个CNAME，主机记录写@，后面记录值写上你的github个人主页<br><a href="http://xxxx.github.io" target="_blank" rel="noopener">http://xxxx.github.io</a><br>（2）再添加一个CNAME，主机记录写www，后面记录值也是<br><a href="http://xxxx.github.io这样别人用www和不用www都能访问你的网站" target="_blank" rel="noopener">http://xxxx.github.io这样别人用www和不用www都能访问你的网站</a></p>
+<p>（其实www的方式，会先解析成<a href="http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。" target="_blank" rel="noopener">http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。</a></p>
+<pre><code>上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，
+但有时候IP地址会更改，导致最后解析不正确，
+所以还是推荐用CNAME别名记录要好些，不建议用IP.</code></pre><p>3、等十分钟左右，刷新浏览器，用你自己域名访问下试试</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://uchuhimo.me/2017/04/11/genesis/" target="_blank" rel="noopener">如何使用 Hexo 和 GitHub Pages 搭建这个博客</a><br><a href="https://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="noopener">官方文档</a><br><a href="https://11.tt/posts/2018/how-to-play-with-live2d-on-hexo/" target="_blank" rel="noopener">搭建看板娘</a><br><a href="https://www.jianshu.com/p/f4a65dccddcd" target="_blank" rel="noopener">域名解析之绑定GITHUB</a><br><a href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md" target="_blank" rel="noopener">Hexo加密官方指南指路</a></p>
 
       
     </div>
@@ -483,8 +502,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/19/c-learning3/" rel="prev" title="C语言重头Xio -3">
-                C语言重头Xio -3 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/19/c-learning2/" rel="prev" title="C语言重头Xio -2">
+                C语言重头Xio -2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -617,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#入门"><span class="nav-number">1.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用Hexo命令"><span class="nav-number">1.1.</span> <span class="nav-text">常用Hexo命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成网页"><span class="nav-number">1.1.1.</span> <span class="nav-text">生成网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程上传同步git"><span class="nav-number">1.1.2.</span> <span class="nav-text">远程上传同步git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署查看本地网页动态"><span class="nav-number">1.1.3.</span> <span class="nav-text">部署查看本地网页动态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页"><span class="nav-number">1.2.</span> <span class="nav-text">网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志"><span class="nav-number">1.3.</span> <span class="nav-text">日志</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个日志"><span class="nav-number">1.3.1.</span> <span class="nav-text">新建一个日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个草稿"><span class="nav-number">1.3.2.</span> <span class="nav-text">新建一个草稿</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页"><span class="nav-number">1.4.1.</span> <span class="nav-text">添加标签页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页"><span class="nav-number">1.4.2.</span> <span class="nav-text">添加分类页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设定Font-Matter"><span class="nav-number">1.5.</span> <span class="nav-text">设定Font Matter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章显示摘要"><span class="nav-number">1.6.</span> <span class="nav-text">首页文章显示摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些遇到的杂七杂八的问题"><span class="nav-number">1.7.</span> <span class="nav-text">一些遇到的杂七杂八的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo博文分类数和标签数显示不正确？"><span class="nav-number">1.7.1.</span> <span class="nav-text">hexo博文分类数和标签数显示不正确？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于显示访问统计"><span class="nav-number">1.7.2.</span> <span class="nav-text">关于显示访问统计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo显示每篇文章的更新时间"><span class="nav-number">1.8.</span> <span class="nav-text">Hexo显示每篇文章的更新时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo配置live2d看版娘"><span class="nav-number">1.9.</span> <span class="nav-text">hexo配置live2d看版娘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-1"><span class="nav-number">1.9.1.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何加密自己的hexo博文"><span class="nav-number">1.10.</span> <span class="nav-text">如何加密自己的hexo博文</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">2.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用Hexo命令"><span class="nav-number">1.</span> <span class="nav-text">常用Hexo命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成网页"><span class="nav-number">1.1.</span> <span class="nav-text">生成网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程上传同步git"><span class="nav-number">1.2.</span> <span class="nav-text">远程上传同步git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署查看本地网页动态"><span class="nav-number">1.3.</span> <span class="nav-text">部署查看本地网页动态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页"><span class="nav-number">2.</span> <span class="nav-text">网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志"><span class="nav-number">3.</span> <span class="nav-text">日志</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个日志"><span class="nav-number">3.1.</span> <span class="nav-text">新建一个日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个草稿"><span class="nav-number">3.2.</span> <span class="nav-text">新建一个草稿</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页"><span class="nav-number">4.1.</span> <span class="nav-text">添加标签页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页"><span class="nav-number">4.2.</span> <span class="nav-text">添加分类页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设定Font-Matter"><span class="nav-number">5.</span> <span class="nav-text">设定Font Matter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章显示摘要"><span class="nav-number">6.</span> <span class="nav-text">首页文章显示摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些遇到的杂七杂八的问题"><span class="nav-number">7.</span> <span class="nav-text">一些遇到的杂七杂八的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo博文分类数和标签数显示不正确？"><span class="nav-number">7.1.</span> <span class="nav-text">hexo博文分类数和标签数显示不正确？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于显示访问统计"><span class="nav-number">7.2.</span> <span class="nav-text">关于显示访问统计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo显示每篇文章的更新时间"><span class="nav-number">8.</span> <span class="nav-text">Hexo显示每篇文章的更新时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo配置live2d看版娘"><span class="nav-number">9.</span> <span class="nav-text">hexo配置live2d看版娘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-1"><span class="nav-number">9.1.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何加密自己的hexo博文"><span class="nav-number">10.</span> <span class="nav-text">如何加密自己的hexo博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何绑定阿里云域名"><span class="nav-number">11.</span> <span class="nav-text">如何绑定阿里云域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加CNAME文件"><span class="nav-number">11.1.</span> <span class="nav-text">添加CNAME文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给github项目添加"><span class="nav-number">11.2.</span> <span class="nav-text">给github项目添加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在域名解析提供商"><span class="nav-number">11.3.</span> <span class="nav-text">在域名解析提供商</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number"></span> <span class="nav-text">参考链接</span></a></li></div>
             
 
           </div>
